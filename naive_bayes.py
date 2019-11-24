@@ -42,8 +42,6 @@ def get_mean_and_standard_deviation(data_points):
     return mean, std
 
 def gaussian(input,pi,mean,std):
-    if std==0:
-        return min_variance_value
     std = max(0.1, std)
     result = 1/(math.sqrt(2*pi)*std)
     result = result*math.exp(-0.5*math.pow(input-mean,2)/math.pow(std,2))
